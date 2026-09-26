@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#06080d" />
+  <meta name="description" content="Science By Hugs — people, data, and a brighter tomorrow. Enter the Science By Hugs research ecosystem." />
+  <title>Science By Hugs</title>
+  <link rel="icon" href="./assets/sbh-monogram.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="space" aria-hidden="true">
+    <div class="stars stars-a"></div>
+    <div class="stars stars-b"></div>
+    <div class="nebula nebula-a"></div>
+    <div class="nebula nebula-b"></div>
+    <div class="grid"></div>
+  </div>
+
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-card">
+      <img src="./assets/sbh-monogram.svg" alt="" class="gate-mark" />
+      <p class="eyebrow">SCIENCE BY HUGS // ACCESS PROTOCOL</p>
+      <h1 id="gateTitle">Research access confirmation</h1>
+      <p class="gate-copy">
+        This website is intended for adults age 21 or older. Products presented through Science By Hugs are for research use only and are not intended for human consumption.
+      </p>
+      <label class="confirm-row">
+        <input type="checkbox" id="ageConfirm" />
+        <span>I am 21 or older and understand the research-use-only policy.</span>
+      </label>
+      <button class="primary-button gate-enter" id="enterSite" disabled>
+        <span>Enter Science By Hugs</span><span aria-hidden="true">→</span>
+      </button>
+      <p class="gate-note">By continuing, you acknowledge the statement above.</p>
+    </div>
+  </div>
+
+  <div class="site-shell" id="siteShell" inert>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Science By Hugs home">
+        <img src="./assets/science-by-hugs.svg" alt="Science By Hugs" />
+      </a>
+      <div class="status-chip"><span class="status-dot"></span> SYSTEM ONLINE</div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">SCIENCE BY HUGS // RESEARCH ECOSYSTEM</p>
+          <h1>Built for the<br /><span>curious.</span></h1>
+          <p class="hero-lede">
+            One ecosystem. Purpose-built tools for research access, organization, and discovery.
+          </p>
+          <a href="#systems" class="primary-button">
+            <span>Explore the ecosystem</span><span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="reactor-wrap" aria-hidden="true">
+          <div class="reactor-orbit orbit-one"></div>
+          <div class="reactor-orbit orbit-two"></div>
+          <div class="reactor-orbit orbit-three"></div>
+          <div class="reactor-core">
+            <img src="./assets/sbh-monogram.svg" alt="" />
+          </div>
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+        </div>
+      </section>
+
+      <section class="systems" id="systems">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECT A SYSTEM</p>
+            <h2>The Science By Hugs ecosystem</h2>
+          </div>
+          <p>Each platform is designed around a specific part of the research experience.</p>
+        </div>
+
+        <div class="system-grid">
+          <a class="system-card nexus-card" href="https://nexus.sciencebyhugs.com" aria-label="Enter Nexus">
+            <div class="card-glow"></div>
+            <div class="card-topline">
+              <span class="live-badge"><span></span> LIVE</span>
+              <span class="card-index">01</span>
+            </div>
+            <img src="./assets/nexus.svg" alt="Nexus — Science By Hugs" class="product-logo" />
+            <p class="descriptor">Customer Research Portal</p>
+            <p class="card-copy">
+              Explore the catalog, manage your account, follow orders, access invoices, and connect with Science By Hugs.
+            </p>
+            <div class="card-action">
+              <span>Enter NEXUS</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <article class="system-card pulse-card" aria-label="Pulse coming soon">
+            <div class="card-topline">
+              <span class="soon-badge">COMING SOON</span>
+              <span class="card-index">02</span>
+            </div>
+            <img src="./assets/pulse.svg" alt="Pulse — Science By Hugs" class="product-logo" />
+            <p class="descriptor">Research Tracking System</p>
+            <p class="card-copy">
+              A future workspace for organizing research inventory, schedules, observations, and longitudinal tracking.
+            </p>
+            <div class="card-action muted">
+              <span>In development</span>
+              <span aria-hidden="true">•••</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mission">
+        <div class="mission-line"></div>
+        <p class="eyebrow">OUR SIGNAL</p>
+        <h2>People. Data.<br /><span>A brighter tomorrow.</span></h2>
+        <p>
+          Science By Hugs brings research access and purpose-built technology together in one connected ecosystem.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <img src="./assets/sbh-monogram.svg" alt="" />
+      <div>
+        <strong>SCIENCE BY HUGS</strong>
+        <span>Research ecosystem</span>
+      </div>
+      <p>For research use only. Not for human consumption.</p>
+      <span class="copyright">© <span id="year"></span> Science By Hugs</span>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
