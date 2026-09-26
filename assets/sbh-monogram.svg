@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Science By Hugs">
+<defs><linearGradient id="b" x1="0" x2="1"><stop stop-color="#0057FF"/><stop offset="1" stop-color="#00D2FF"/></linearGradient><filter id="g" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7" result="x"/><feMerge><feMergeNode in="x"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<circle cx="110" cy="110" r="77" fill="none" stroke="url(#b)" stroke-width="4" opacity=".5"/>
+<path d="M48 122c28 52 93 59 126 12M53 84c29-45 91-52 122-15" fill="none" stroke="url(#b)" stroke-width="7" stroke-linecap="round"/>
+<circle cx="177" cy="67" r="8" fill="#00D2FF" filter="url(#g)"/>
+<text x="110" y="128" text-anchor="middle" fill="#F7FAFF" font-family="Space Grotesk,Inter,Arial,sans-serif" font-size="52" font-weight="700" letter-spacing="3">SBH</text>
+</svg>
