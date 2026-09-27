@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "Science By Hugs",
+  "short_name": "SBH",
+  "description": "Science By Hugs research ecosystem.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#06080D",
+  "theme_color": "#06080D",
+  "categories": ["science", "productivity"],
+  "icons": [
+    {
+      "src": "./assets/sbh-app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
