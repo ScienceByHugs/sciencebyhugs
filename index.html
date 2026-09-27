@@ -51,7 +51,13 @@
       <a class="brand" href="#top" aria-label="Science By Hugs home">
         <img src="./assets/science-by-hugs.svg" alt="Science By Hugs" />
       </a>
-      <div class="status-chip"><span class="status-dot"></span> SYSTEM ONLINE</div>
+      <div class="header-actions">
+        <button class="install-button" id="installApp" type="button" hidden>
+          <span class="install-icon" aria-hidden="true">↓</span>
+          <span>Install SBH</span>
+        </button>
+        <div class="status-chip"><span class="status-dot"></span> SYSTEM ONLINE</div>
+      </div>
     </header>
 
     <main id="top">
@@ -144,6 +150,30 @@
       <p>For research use only. Not for human consumption.</p>
       <span class="copyright">© <span id="year"></span> Science By Hugs</span>
     </footer>
+  </div>
+
+  <div class="install-sheet" id="installSheet" hidden>
+    <button class="install-backdrop" id="closeInstallBackdrop" aria-label="Close install instructions"></button>
+    <section class="install-panel" role="dialog" aria-modal="true" aria-labelledby="installTitle">
+      <div class="install-panel-head">
+        <img src="./assets/sbh-app-icon.svg" alt="" />
+        <div>
+          <p class="eyebrow">INSTALL SCIENCE BY HUGS</p>
+          <h2 id="installTitle">Add SBH to your Home Screen</h2>
+        </div>
+        <button class="icon-button" id="closeInstall" aria-label="Close install instructions">×</button>
+      </div>
+      <div class="ios-install" id="iosInstall" hidden>
+        <ol class="install-steps">
+          <li><span>1</span><div><strong>Open this page in Safari</strong><p>If you're in another browser, copy the address and open it in Safari.</p></div></li>
+          <li><span>2</span><div><strong>Tap the Share button</strong><p>Look for the square with the upward arrow.</p></div></li>
+          <li><span>3</span><div><strong>Choose “Add to Home Screen”</strong><p>Confirm the name, then tap Add.</p></div></li>
+        </ol>
+      </div>
+      <div class="generic-install" id="genericInstall" hidden>
+        <p>Your browser can install Science By Hugs as an app. Use your browser menu and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p>
+      </div>
+    </section>
   </div>
 
   <script src="./script.js"></script>
