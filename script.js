@@ -27,3 +27,12 @@ enterSite?.addEventListener('click', () => {
   unlockSite();
   document.querySelector('.brand')?.focus({ preventScroll: true });
 });
+
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(error => {
+      console.warn('SBH service worker registration failed:', error);
+    });
+  });
+}
