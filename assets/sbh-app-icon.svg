@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Science By Hugs">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="42%" r="68%">
+    <stop offset="0" stop-color="#101b33"/>
+    <stop offset=".58" stop-color="#080d18"/>
+    <stop offset="1" stop-color="#05070b"/>
+  </radialGradient>
+  <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#0057FF"/>
+    <stop offset="1" stop-color="#00D2FF"/>
+  </linearGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="11" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<circle cx="256" cy="256" r="176" fill="none" stroke="url(#b)" stroke-width="8" opacity=".48"/>
+<path d="M116 282c64 119 211 134 286 28M127 196c65-102 205-118 275-34" fill="none" stroke="url(#b)" stroke-width="16" stroke-linecap="round"/>
+<circle cx="406" cy="156" r="17" fill="#00D2FF" filter="url(#glow)"/>
+<circle cx="406" cy="156" r="7" fill="#F7FAFF"/>
+<text x="256" y="298" text-anchor="middle" fill="#F7FAFF" font-family="Arial,Helvetica,sans-serif" font-size="112" font-weight="700" letter-spacing="4">SBH</text>
+</svg>
