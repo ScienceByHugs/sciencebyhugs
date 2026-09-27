@@ -122,3 +122,27 @@ footer p{margin:0}.copyright{white-space:nowrap}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
+
+.header-actions{display:flex;align-items:center;gap:12px}
+.install-button{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(0,210,255,.28);background:rgba(0,210,255,.07);color:#dffbff;border-radius:999px;padding:10px 14px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.install-button:hover{border-color:rgba(0,210,255,.5);background:rgba(0,210,255,.11)}
+.install-icon{font-size:15px;line-height:1}
+.install-sheet{position:fixed;inset:0;z-index:40}
+.install-backdrop{position:absolute;inset:0;border:0;background:rgba(3,5,9,.74);backdrop-filter:blur(14px)}
+.install-panel{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(620px,calc(100% - 28px));border:1px solid rgba(0,210,255,.24);border-radius:26px;background:linear-gradient(155deg,rgba(18,25,35,.99),rgba(6,8,13,.99));box-shadow:0 30px 100px rgba(0,0,0,.55),0 0 50px rgba(0,87,255,.12);padding:24px}
+.install-panel-head{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start}
+.install-panel-head img{width:64px;border-radius:16px}
+.install-panel-head h2{font-family:var(--display);font-size:30px;line-height:1.03;letter-spacing:-.03em;margin:0}
+.install-panel-head .eyebrow{margin-bottom:8px}
+.icon-button{border:1px solid rgba(192,198,212,.16);background:rgba(255,255,255,.03);color:#cbd3df;width:36px;height:36px;border-radius:50%;font-size:24px;line-height:1;cursor:pointer}
+.install-steps{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:14px}
+.install-steps li{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;padding:14px;border:1px solid rgba(192,198,212,.11);background:rgba(255,255,255,.018);border-radius:14px}
+.install-steps li>span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(0,87,255,.18);color:#dff7ff;font-weight:800}
+.install-steps strong{display:block;margin-bottom:4px}
+.install-steps p,.generic-install p{margin:0;color:#97a2b1;line-height:1.55;font-size:14px}
+.generic-install{margin-top:22px;padding:16px;border:1px solid rgba(192,198,212,.11);border-radius:14px;background:rgba(255,255,255,.018)}
+@media(max-width:900px){.header-actions .status-chip{display:none}}
+@media(max-width:560px){
+  .site-header{gap:10px}.brand img{max-width:64vw}.install-button{padding:9px 11px;font-size:10px;letter-spacing:.08em}
+  .install-panel{padding:20px;border-radius:22px}.install-panel-head{grid-template-columns:auto 1fr auto;gap:12px}.install-panel-head img{width:52px}.install-panel-head h2{font-size:25px}
+}
