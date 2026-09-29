@@ -30,10 +30,43 @@ enterSite?.addEventListener('click', () => {
 
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(error => {
+  let reloadingForUpdate = false;
+  let lastUpdateCheck = 0;
+
+  const checkForSbhUpdate = async () => {
+    const now = Date.now();
+    if (now - lastUpdateCheck < 15000) return;
+    lastUpdateCheck = now;
+
+    try {
+      const registration = await navigator.serviceWorker.getRegistration();
+      if (registration) await registration.update();
+    } catch (error) {
+      console.warn('SBH PWA update check failed:', error);
+    }
+  };
+
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (reloadingForUpdate) return;
+    reloadingForUpdate = true;
+    window.location.reload();
+  });
+
+  window.addEventListener('load', async () => {
+    try {
+      const registration = await navigator.serviceWorker.register('./sw.js', {
+        updateViaCache: 'none',
+      });
+      await registration.update();
+    } catch (error) {
       console.warn('SBH service worker registration failed:', error);
-    });
+    }
+  });
+
+  window.addEventListener('pageshow', () => void checkForSbhUpdate());
+  window.addEventListener('focus', () => void checkForSbhUpdate());
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') void checkForSbhUpdate();
   });
 }
 
