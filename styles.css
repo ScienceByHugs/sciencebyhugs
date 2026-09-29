@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--black)}
-body{margin:0;min-height:100vh;background:var(--black);color:var(--white);font-family:var(--body);overflow-x:hidden}
+body{margin:0;min-height:100vh;min-height:100dvh;background:var(--black);color:var(--white);font-family:var(--body);overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit}
 ::selection{background:rgba(0,210,255,.28)}
@@ -39,7 +39,7 @@ button,input{font:inherit}
 .grid{position:absolute;left:-15%;right:-15%;bottom:-30vh;height:62vh;transform:perspective(620px) rotateX(67deg);
   transform-origin:center top;background-image:linear-gradient(rgba(0,210,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(0,210,255,.08) 1px,transparent 1px);
   background-size:58px 58px;mask-image:linear-gradient(to bottom,transparent,black 20%,black 75%,transparent)}
-.site-shell{position:relative;z-index:1;max-width:1540px;margin:0 auto;padding:0 5vw}
+.site-shell{position:relative;z-index:1;max-width:1540px;margin:0 auto;padding:env(safe-area-inset-top) 5vw env(safe-area-inset-bottom)}
 .site-header{min-height:108px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
 .brand img{width:min(330px,44vw);display:block}
 .status-chip,.live-badge,.soon-badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(0,210,255,.22);background:rgba(0,210,255,.055);color:#b7f5ff;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.14em;padding:10px 13px}
@@ -87,9 +87,9 @@ footer{min-height:150px;border-top:1px solid var(--line);display:grid;grid-templ
 footer img{width:52px}
 footer div{display:flex;flex-direction:column;gap:4px}footer strong{color:#cdd4df;letter-spacing:.08em}footer div span{color:#687383}
 footer p{margin:0}.copyright{white-space:nowrap}
-.age-gate{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:22px;background:rgba(3,5,9,.88);backdrop-filter:blur(20px)}
+.age-gate{position:fixed;inset:0;z-index:20;display:grid;place-items:start center;overflow-y:auto;padding:max(22px,env(safe-area-inset-top)) 22px max(22px,env(safe-area-inset-bottom));background:rgba(3,5,9,.88);backdrop-filter:blur(20px)}
 .age-gate.hidden{display:none}
-.gate-card{position:relative;width:min(560px,100%);padding:38px;border-radius:26px;border:1px solid rgba(0,210,255,.25);background:linear-gradient(155deg,rgba(18,25,35,.98),rgba(6,8,13,.98));box-shadow:0 30px 90px rgba(0,0,0,.5),0 0 50px rgba(0,87,255,.11)}
+.gate-card{position:relative;width:min(560px,100%);margin:auto 0;padding:38px;border-radius:26px;border:1px solid rgba(0,210,255,.25);background:linear-gradient(155deg,rgba(18,25,35,.98),rgba(6,8,13,.98));box-shadow:0 30px 90px rgba(0,0,0,.5),0 0 50px rgba(0,87,255,.11)}
 .gate-mark{width:74px;margin-bottom:24px}
 .gate-card h1{font-family:var(--display);font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:-.04em;margin:0 0 20px}
 .gate-copy,.gate-note{color:#a8b1bf;line-height:1.65}
@@ -100,7 +100,7 @@ footer p{margin:0}.copyright{white-space:nowrap}
 .gate-note{text-align:center;font-size:11px;margin:15px 0 0}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes drift{to{transform:translate3d(-130px,70px,0)}}
 @media(max-width:900px){
-  .site-shell{padding:0 22px}.site-header{min-height:88px}.status-chip{display:none}
+  .site-shell{padding:max(10px,env(safe-area-inset-top)) 22px max(18px,env(safe-area-inset-bottom))}.site-header{min-height:88px}.status-chip{display:none}
   .brand img{width:min(300px,72vw)}
   .hero{min-height:auto;grid-template-columns:1fr;padding:72px 0 100px;gap:70px}
   .reactor-wrap{max-width:470px}
@@ -109,7 +109,7 @@ footer p{margin:0}.copyright{white-space:nowrap}
   footer{grid-template-columns:auto 1fr;padding:28px 0}footer>p,.copyright{grid-column:1/-1}
 }
 @media(max-width:560px){
-  .site-shell{padding:0 18px}.site-header{min-height:76px}
+  .site-shell{padding:max(10px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom))}.site-header{min-height:76px}
   .brand img{width:245px;max-width:74vw}
   .hero{padding:58px 0 82px}.hero h1{font-size:clamp(56px,18vw,84px)}.hero-lede{font-size:17px;margin-top:25px}
   .primary-button{width:100%}
@@ -150,3 +150,14 @@ footer p{margin:0}.copyright{white-space:nowrap}
 /* Blue Reactor v2 — ecosystem identity */
 .hero-tagline{margin:0 0 10px;color:var(--cyan);font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(1rem,2vw,1.3rem);font-weight:700;letter-spacing:.08em}
 .product-tagline{position:relative;z-index:1;margin:0 0 4px;color:var(--silver);font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(1rem,2vw,1.2rem);font-weight:700;letter-spacing:.045em}
+
+
+/* Mobile viewport / notch hardening */
+@supports (height:100dvh){
+  .age-gate{min-height:100dvh}
+}
+@media(max-width:560px){
+  .age-gate{align-items:flex-start}
+  .gate-card{margin:0}
+  .site-header{padding-top:2px}
+}
