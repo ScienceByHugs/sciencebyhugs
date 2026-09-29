@@ -146,3 +146,7 @@ footer p{margin:0}.copyright{white-space:nowrap}
   .site-header{gap:10px}.brand img{max-width:64vw}.install-button{padding:9px 11px;font-size:10px;letter-spacing:.08em}
   .install-panel{padding:20px;border-radius:22px}.install-panel-head{grid-template-columns:auto 1fr auto;gap:12px}.install-panel-head img{width:52px}.install-panel-head h2{font-size:25px}
 }
+
+/* Blue Reactor v2 — ecosystem identity */
+.hero-tagline{margin:0 0 10px;color:var(--cyan);font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(1rem,2vw,1.3rem);font-weight:700;letter-spacing:.08em}
+.product-tagline{position:relative;z-index:1;margin:0 0 4px;color:var(--silver);font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(1rem,2vw,1.2rem);font-weight:700;letter-spacing:.045em}
