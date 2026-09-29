@@ -1,36 +1,64 @@
-# Science By Hugs
+<p align="center">
+  <img src="assets/science-by-hugs.svg" alt="Science By Hugs" width="760" />
+</p>
 
-Public landing page and ecosystem gateway for **Science By Hugs**.
+<h3 align="center">Built for the research ahead.</h3>
 
-## Product routing
+<p align="center">
+  One connected ecosystem for research access, operations, and tracking.
+</p>
 
-- **NEXUS** — live customer research portal
-- **PULSE** — coming soon
-- **CORE** — intentionally omitted from public navigation; internal/admin-only
+<p align="center">
+  <a href="https://sciencebyhugs.com"><strong>sciencebyhugs.com</strong></a>
+</p>
 
-## Design system
+---
 
-Uses the approved **Blue Reactor** brand language:
-- Jet Black `#0A0A0B`
-- Cobalt Blue `#0057FF`
-- Cyan Blue `#00D2FF`
-- Metallic Silver `#C0C6D4`
-- Soft White `#F7FAFF`
-- Space Grotesk display type
-- Inter body type
+## Science By Hugs ecosystem
 
-The site is a zero-dependency static build with responsive desktop/mobile layouts, reduced-motion support, and an age/research-use acknowledgment gate.
+| Product | Role | Signal |
+| --- | --- | --- |
+| <img src="assets/nexus.svg" alt="NEXUS" width="220" /> | Customer research portal | **Explore. Connect. Order.** |
+| <img src="assets/core.svg" alt="CORE" width="220" /> | Internal operations system | **Control. Operate. Manage.** |
+| <img src="assets/pulse.svg" alt="PULSE" width="220" /> | Research tracking system | **Track. Measure. Evolve.** |
 
-## Deployment
+### NEXUS
+Customer-facing catalog, account, ordering, payment, invoice, referral, and support experience.
 
-GitHub Pages deploys automatically from `main` using `.github/workflows/pages.yml`.
+### CORE
+Private administrative command center for Science By Hugs operations, fulfillment, customers, catalog, finance, analytics, referrals, notifications, and audit activity.
 
-The NEXUS card currently routes to:
+### PULSE
+Private tracking platform for inventory, schedules, logs, cycles, adherence, reminders, and research organization.
 
-`https://nexus.sciencebyhugs.com`
+---
 
-## Domain
+## Blue Reactor
 
-This repository is intended to serve the primary domain:
+Science By Hugs uses the **Blue Reactor** design system across the ecosystem.
 
-`sciencebyhugs.com`
+- Jet Black — `#0A0A0B`
+- Cobalt Blue — `#0057FF`
+- Cyan Blue — `#00D2FF`
+- Metallic Silver — `#C0C6D4`
+- Soft White — `#F7FAFF`
+- Display typography — **Space Grotesk**
+- UI typography — **Inter**
+
+The canonical specification lives at `docs/brand/BLUE_REACTOR.md`.
+
+---
+
+## Production
+
+**Main ecosystem:** https://sciencebyhugs.com  
+**NEXUS:** https://nexus.sciencebyhugs.com
+
+Science By Hugs products and public-facing materials follow the applicable research-use-only policies and notices presented through the platform.
+
+---
+
+<p align="center">
+  <strong>SCIENCE BY HUGS</strong><br/>
+  <sub>Built for the research ahead.</sub>
+</p>
