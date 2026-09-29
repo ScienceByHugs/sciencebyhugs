@@ -177,3 +177,20 @@ footer p{margin:0}.copyright{white-space:nowrap}
     min-height:78px;
   }
 }
+
+
+/* Center the access confirmation in normal mobile viewports.
+   Short screens fall back to top alignment so the card remains scrollable. */
+@media(max-width:560px){
+  .age-gate{
+    place-items:center;
+  }
+  .gate-card{
+    margin:0;
+  }
+}
+@media(max-width:560px) and (max-height:700px){
+  .age-gate{
+    place-items:start center;
+  }
+}
