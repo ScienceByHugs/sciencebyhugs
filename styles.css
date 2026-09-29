@@ -161,3 +161,19 @@ footer p{margin:0}.copyright{white-space:nowrap}
   .gate-card{margin:0}
   .site-header{padding-top:2px}
 }
+
+
+/* iOS standalone/PWA header protection */
+@media(max-width:900px){
+  .site-shell{
+    padding-top:max(48px,calc(env(safe-area-inset-top) + 14px));
+  }
+}
+@media(max-width:560px){
+  .site-shell{
+    padding-top:max(56px,calc(env(safe-area-inset-top) + 16px));
+  }
+  .site-header{
+    min-height:78px;
+  }
+}
