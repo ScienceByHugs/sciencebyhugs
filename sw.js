@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sbh-hub-v3';
+const CACHE_NAME = 'sbh-hub-v4';
 const APP_SHELL = [
   './',
   './index.html',
@@ -8,6 +8,9 @@ const APP_SHELL = [
   './assets/science-by-hugs.svg',
   './assets/sbh-monogram.svg',
   './assets/sbh-app-icon.svg',
+  './assets/sbh-apple-touch-icon.png',
+  './assets/sbh-icon-192.png',
+  './assets/sbh-icon-512.png',
   './assets/nexus.svg',
   './assets/pulse.svg'
 ];
