@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sbh-hub-v5';
+const CACHE_NAME = 'sbh-hub-v6';
 const APP_SHELL = [
   './',
   './index.html',
