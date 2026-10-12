@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sbh-hub-v6';
+const CACHE_NAME = 'sbh-hub-v7';
 const APP_SHELL = [
   './',
   './index.html',
@@ -36,6 +36,9 @@ self.addEventListener('fetch', event => {
 
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
+
+  // Policy documents must never replace or fall back to the hub homepage.
+  if (url.pathname === '/pulse' || url.pathname.startsWith('/pulse/')) return;
 
   if (event.request.mode === 'navigate') {
     event.respondWith(
